@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.pakachu.apaydinfitness.LoginFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_login">
+
+        <action
+            android:id="@+id/action_loginFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.pakachu.apaydinfitness.MainFragment"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/fragment_main">
+
+        <action
+            android:id="@+id/action_mainFragment_to_olculerimFragment"
+            app:destination="@id/olculerimFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_antrenmanFragment"
+            app:destination="@id/antrenmanFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_duyurularFragment"
+            app:destination="@id/duyurularFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_iletisimFragment"
+            app:destination="@id/iletisimFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_saatlerFragment"
+            app:destination="@id/saatlerFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_arenaFragment"
+            app:destination="@id/arenaFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_gamesFragment"
+            app:destination="@id/gamesFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_dietFragment"
+            app:destination="@id/dietFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_hareketlerFragment"
+            app:destination="@id/hareketlerFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_araclarFragment"
+            app:destination="@id/araclarFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_takviyelerFragment"
+            app:destination="@id/takviyelerFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_fitopediaFragment"
+            app:destination="@id/fitopediaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/olculerimFragment"
+        android:name="com.pakachu.apaydinfitness.OlculerimFragment"
+        android:label="fragment_olculerim"
+        tools:layout="@layout/fragment_olculerim" >
+        <action
+            android:id="@+id/action_olculerimFragment_to_antrenorMenu"
+            app:destination="@id/antrenorMenu" />
+    </fragment>
+    <fragment
+        android:id="@+id/antrenmanFragment"
+        android:name="com.pakachu.apaydinfitness.AntrenmanFragment"
+        android:label="fragment_antrenman"
+        tools:layout="@layout/fragment_antrenman" >
+        <action
+            android:id="@+id/action_antrenmanFragment_to_antrenmanOlusturFragment"
+            app:destination="@id/antrenmanOlusturFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/antrenmanOlusturFragment"
+        android:name="com.pakachu.apaydinfitness.AntrenmanOlusturFragment"
+        android:label="fragment_antrenman_olustur"
+        tools:layout="@layout/fragment_antrenman_olustur" />
+    <fragment
+        android:id="@+id/duyurularFragment"
+        android:name="com.pakachu.apaydinfitness.DuyurularFragment"
+        android:label="fragment_duyurular"
+        tools:layout="@layout/fragment_duyurular" >
+        <action
+            android:id="@+id/action_duyurularFragment_to_duyurularAdmin"
+            app:destination="@id/duyurularAdmin" />
+    </fragment>
+    <fragment
+        android:id="@+id/iletisimFragment"
+        android:name="com.pakachu.apaydinfitness.IletisimFragment"
+        android:label="fragment_iletisim"
+        tools:layout="@layout/fragment_iletisim" />
+    <fragment
+        android:id="@+id/saatlerFragment"
+        android:name="com.pakachu.apaydinfitness.SaatlerFragment"
+        android:label="fragment_saatler"
+        tools:layout="@layout/fragment_saatler" />
+    <fragment
+        android:id="@+id/antrenorMenu"
+        android:name="com.pakachu.apaydinfitness.admin.AntrenorMenu"
+        android:label="fragment_antrenor_menu"
+        tools:layout="@layout/fragment_antrenor_menu" />
+    <fragment
+        android:id="@+id/duyurularAdmin"
+        android:name="com.pakachu.apaydinfitness.admin.DuyurularAdmin"
+        android:label="fragment_duyurular_admin"
+        tools:layout="@layout/fragment_duyurular_admin" />
+    <fragment
+        android:id="@+id/arenaFragment"
+        android:name="com.pakachu.apaydinfitness.ArenaFragment"
+        android:label="fragment_arena"
+        tools:layout="@layout/fragment_arena" />
+    <fragment
+        android:id="@+id/gamesFragment"
+        android:name="com.pakachu.apaydinfitness.GamesFragment"
+        android:label="fragment_games"
+        tools:layout="@layout/fragment_games" >
+        <action
+            android:id="@+id/action_gamesFragment_to_XOXFragment"
+            app:destination="@id/XOXFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dietFragment"
+        android:name="com.pakachu.apaydinfitness.DietFragment"
+        android:label="fragment_diet"
+        tools:layout="@layout/fragment_diet" />
+    <fragment
+        android:id="@+id/XOXFragment"
+        android:name="com.pakachu.apaydinfitness.games.xox.XOXFragment"
+        android:label="fragment_x_o_x"
+        tools:layout="@layout/fragment_x_o_x" />
+    <fragment
+        android:id="@+id/hareketlerFragment"
+        android:name="com.pakachu.apaydinfitness.HareketlerFragment"
+        android:label="fragment_hareketler"
+        tools:layout="@layout/fragment_hareketler" />
+    <fragment
+        android:id="@+id/araclarFragment"
+        android:name="com.pakachu.apaydinfitness.AraclarFragment"
+        android:label="fragment_araclar"
+        tools:layout="@layout/fragment_araclar" />
+    <fragment
+        android:id="@+id/takviyelerFragment"
+        android:name="com.pakachu.apaydinfitness.TakviyelerFragment"
+        android:label="fragment_takviyeler"
+        tools:layout="@layout/fragment_takviyeler" />
+    <fragment
+        android:id="@+id/fitopediaFragment"
+        android:name="com.pakachu.apaydinfitness.FitopediaFragment"
+        android:label="fragment_fitopedia"
+        tools:layout="@layout/fragment_fitopedia" />
+</navigation>
