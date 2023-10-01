@@ -14,6 +14,7 @@ import android.view.animation.AnimationUtils;
 import com.pakachu.apaydinfitness.customdialogs.FitMiyimDialog;
 import com.pakachu.apaydinfitness.customdialogs.QuickRMDialog;
 import com.pakachu.apaydinfitness.databinding.FragmentAraclarBinding;
+import com.pakachu.apaydinfitness.helpers.AddLoader;
 
 public class AraclarFragment extends Fragment {
 
@@ -24,6 +25,10 @@ public class AraclarFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         binding = FragmentAraclarBinding.inflate(inflater, container, false);
+
+        AddLoader addLoader = new AddLoader(getActivity());
+        addLoader.RequestInterstatial();
+
         return binding.getRoot();
     }
 

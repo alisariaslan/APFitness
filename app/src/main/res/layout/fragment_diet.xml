@@ -203,7 +203,8 @@
                                 <androidx.recyclerview.widget.RecyclerView
                                     android:id="@+id/rw_food"
                                     android:layout_width="match_parent"
-                                    android:layout_height="wrap_content">
+                                    android:layout_height="600px"
+                                    android:scrollbars="vertical">
 
                                 </androidx.recyclerview.widget.RecyclerView>
 
@@ -283,6 +284,7 @@
                                 android:fontFamily="@font/audiowide"
                                 android:hint="Yemek ara"
                                 android:inputType="textPersonName"
+                                android:minHeight="48dp"
                                 app:layout_constraintEnd_toStartOf="@+id/imageView9"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toBottomOf="@+id/textView27" />
@@ -306,13 +308,14 @@
                                 android:textAlignment="center"
                                 android:textSize="16sp"
                                 app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintStart_toEndOf="@+id/textView70"
+
                                 app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName30" />
 
                             <androidx.recyclerview.widget.RecyclerView
                                 android:id="@+id/rw_all_foods"
                                 android:layout_width="0dp"
-                                android:layout_height="wrap_content"
+                                android:layout_height="600px"
+                                android:scrollbars="vertical"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintStart_toEndOf="@+id/button3"
                                 app:layout_constraintStart_toStartOf="parent"
@@ -334,8 +337,7 @@
                                     android:id="@+id/constraintLayout6"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:padding="15dp"
-                                    android:theme="@style/Theme.ApaydinFitness.InItem">
+                                    android:padding="15dp">
 
                                     <TextView
                                         android:id="@+id/textView64"
@@ -626,7 +628,8 @@
                             <androidx.recyclerview.widget.RecyclerView
                                 android:id="@+id/recyclerView3"
                                 android:layout_width="0dp"
-                                android:layout_height="wrap_content"
+                                android:layout_height="600px"
+                                android:scrollbars="vertical"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toBottomOf="@+id/textView35" />

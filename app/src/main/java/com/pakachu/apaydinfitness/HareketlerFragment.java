@@ -36,7 +36,7 @@ public class HareketlerFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        binding= FragmentHareketlerBinding.inflate(inflater, container, false);
+        binding = FragmentHareketlerBinding.inflate(inflater, container, false);
         return binding.getRoot();
     }
 
@@ -72,14 +72,14 @@ public class HareketlerFragment extends Fragment {
     }
 
     public void ListHarekets(String name) {
-        ArrayList<OnizleHareketAndDetayItem> onizleHareketAndDetayItems=new ArrayList<>();
-        DBIdman dbIdman=new DBIdman(getContext());
-        Cursor cursor= dbIdman.getData("SELECT * FROM hareketler WHERE hareket LIKE '%"+name+"%'");
-        while(cursor.moveToNext()) {
-            OnizleHareketAndDetayItem onizleHareketAndDetayItem =new OnizleHareketAndDetayItem(cursor.getString(1),cursor.getInt(0));
+        ArrayList<OnizleHareketAndDetayItem> onizleHareketAndDetayItems = new ArrayList<>();
+        DBIdman dbIdman = new DBIdman(getContext());
+        Cursor cursor = dbIdman.getData("SELECT * FROM hareketler WHERE hareket LIKE '%" + name + "%'");
+        while (cursor.moveToNext()) {
+            OnizleHareketAndDetayItem onizleHareketAndDetayItem = new OnizleHareketAndDetayItem(cursor.getString(1), cursor.getInt(0));
             onizleHareketAndDetayItems.add(onizleHareketAndDetayItem);
         }
-        binding.textView50.setText(cursor.getCount()+" hareket bulundu.");
+        binding.textView50.setText(cursor.getCount() + " hareket bulundu.");
         OnizleHareketAndDetayAdapter myAdapter = new OnizleHareketAndDetayAdapter(getActivity(), onizleHareketAndDetayItems);
         LinearLayoutManager layoutManager = new LinearLayoutManager(getContext());
         binding.reciav.setLayoutManager(layoutManager);
@@ -89,6 +89,6 @@ public class HareketlerFragment extends Fragment {
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-        binding=null;
+        binding = null;
     }
 }

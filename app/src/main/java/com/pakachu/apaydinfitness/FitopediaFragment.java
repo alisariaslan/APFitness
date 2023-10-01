@@ -16,6 +16,7 @@ import android.view.ViewGroup;
 
 import com.pakachu.apaydinfitness.customdialogs.MyCustomDialog;
 import com.pakachu.apaydinfitness.databinding.FragmentFitopediaBinding;
+import com.pakachu.apaydinfitness.helpers.AddLoader;
 
 
 public class FitopediaFragment extends Fragment {
@@ -31,6 +32,10 @@ public class FitopediaFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         binding = FragmentFitopediaBinding.inflate(inflater, container, false);
+
+        AddLoader addLoader = new AddLoader(getActivity());
+        addLoader.RequestInterstatial();
+
         return binding.getRoot();
     }
 

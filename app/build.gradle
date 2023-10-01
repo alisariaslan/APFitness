@@ -9,8 +9,8 @@ android {
         applicationId "com.pakachu.apaydinfitness"
         minSdk 24
         targetSdk 32
-        versionCode 12
-        versionName "LatPull"
+        versionCode 13
+        versionName "Showdown"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -27,6 +27,7 @@ android {
     buildFeatures {
         viewBinding true
     }
+    namespace 'com.pakachu.apaydinfitness'
 }
 
 dependencies {

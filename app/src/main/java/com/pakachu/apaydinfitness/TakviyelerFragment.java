@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.pakachu.apaydinfitness.databinding.FragmentTakviyelerBinding;
+import com.pakachu.apaydinfitness.helpers.AddLoader;
 
 public class TakviyelerFragment extends Fragment {
 
@@ -21,6 +22,10 @@ public class TakviyelerFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         binding = FragmentTakviyelerBinding.inflate(inflater, container, false);
+
+        AddLoader addLoader = new AddLoader(getActivity());
+        addLoader.RequestInterstatial();
+
         return binding.getRoot();
     }
 

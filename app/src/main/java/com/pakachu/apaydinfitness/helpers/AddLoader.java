@@ -1,6 +1,7 @@
 package com.pakachu.apaydinfitness.helpers;
 
 import android.app.Activity;
+import android.view.View;
 
 import androidx.annotation.NonNull;
 
@@ -12,6 +13,7 @@ import com.google.android.gms.ads.FullScreenContentCallback;
 import com.google.android.gms.ads.LoadAdError;
 import com.google.android.gms.ads.interstitial.InterstitialAd;
 import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
+import com.pakachu.apaydinfitness.db.DBLogin;
 
 public class AddLoader {
 
@@ -25,7 +27,9 @@ public class AddLoader {
 
     public void RequestInterstatial() {
         {
-            if (MainActivity.addReadyToLoad) {
+            DBLogin dbLogin = new DBLogin(activity.getApplication());
+            if (MainActivity.addReadyToLoad && dbLogin.getClearenceLevel() < 100) {
+                MainActivity.addReadyToLoad = false;
                 AdRequest adRequest = new AdRequest.Builder().build();
                 InterstitialAd.load(activity, Credentials.getAdd_id(), adRequest,
                         new InterstitialAdLoadCallback() {
@@ -39,7 +43,6 @@ public class AddLoader {
                                     @Override
                                     public void onAdDismissedFullScreenContent() {
                                         mInterstitialAd = null;
-                                        MainActivity.addReadyToLoad=false;
                                         MainActivity.addCountDownTimer.start();
                                     }
                                 });

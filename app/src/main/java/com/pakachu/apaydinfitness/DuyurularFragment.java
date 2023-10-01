@@ -85,21 +85,21 @@ public class DuyurularFragment extends Fragment {
             duyuruItemArrayList.add(duyuruItem);
         }
         duyuruAdapter = new DuyuruAdapter(getActivity(), getContext(), duyuruItemArrayList, this);
-         layoutManager = new LinearLayoutManager(getContext());
+        layoutManager = new LinearLayoutManager(getContext());
         binding.recigoz.setLayoutManager(layoutManager);
         binding.recigoz.setAdapter(duyuruAdapter);
 
-        Yazdir(okunmadiCount,okunduCount);
+        Yazdir(okunmadiCount, okunduCount);
     }
 
-    private void Yazdir(int okunmadiCount,int okunduCount) {
+    private void Yazdir(int okunmadiCount, int okunduCount) {
         if (okunmadiCount > 0) {
             binding.textView55.setText("Okunmamış Duyurular: " + okunmadiCount);
         } else {
             binding.textView55.setText("Tüm duyurular okundu");
             binding.imageView14.setVisibility(View.VISIBLE);
         }
-        if(okunduCount>0)
+        if (okunduCount > 0)
             binding.textView57.setVisibility(View.VISIBLE);
     }
 
