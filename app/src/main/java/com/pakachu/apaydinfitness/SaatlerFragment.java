@@ -1,6 +1,5 @@
 package com.pakachu.apaydinfitness;
 
-import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -14,10 +13,6 @@ import android.view.ViewGroup;
 import android.view.animation.AnimationUtils;
 
 import com.pakachu.apaydinfitness.databinding.FragmentSaatlerBinding;
-import com.pakachu.apaydinfitness.helpers.AddLoader;
-
-import java.util.Timer;
-import java.util.TimerTask;
 
 
 public class SaatlerFragment extends Fragment {
@@ -29,8 +24,6 @@ public class SaatlerFragment extends Fragment {
         // Inflate the layout for this fragment
         binding = FragmentSaatlerBinding.inflate(inflater, container, false);
 
-        AddLoader addLoader = new AddLoader(getActivity());
-        addLoader.RequestInterstatial();
 
         return binding.getRoot();
     }

@@ -17,7 +17,6 @@ import com.pakachu.apaydinfitness.adapters.duyuru.DuyuruItem;
 import com.pakachu.apaydinfitness.databinding.FragmentDuyurularBinding;
 import com.pakachu.apaydinfitness.db.DBLogin;
 import com.pakachu.apaydinfitness.db.DBNotif;
-import com.pakachu.apaydinfitness.helpers.AddLoader;
 
 import java.util.ArrayList;
 
@@ -38,9 +37,6 @@ public class DuyurularFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
-        AddLoader addLoader = new AddLoader(getActivity());
-        addLoader.RequestInterstatial();
 
         Getir();
 

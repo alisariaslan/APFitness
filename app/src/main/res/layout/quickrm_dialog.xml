@@ -102,7 +102,7 @@
             android:padding="10dp"
             android:scrollIndicators="bottom"
             android:singleLine="false"
-            android:text="Daha fazla sonuç görmek, daha detaylı araştırma yapmak için buraya tıklayınız."
+            android:text="Kaynağa gitmek  için buraya tıklayınız."
             android:textAlignment="center"
             android:textColor="#3F51B5"
             android:textSize="16sp"

@@ -22,7 +22,6 @@ import com.pakachu.apaydinfitness.adapters.idman.ProgramItem;
 import com.pakachu.apaydinfitness.customdialogs.MyCustomDialog;
 import com.pakachu.apaydinfitness.databinding.FragmentAntrenmanBinding;
 import com.pakachu.apaydinfitness.db.DBIdman;
-import com.pakachu.apaydinfitness.helpers.AddLoader;
 import com.pakachu.apaydinfitness.helpers.DefaultProgram;
 import com.journeyapps.barcodescanner.ScanContract;
 import com.journeyapps.barcodescanner.ScanOptions;
@@ -54,9 +53,6 @@ public class AntrenmanFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
-        AddLoader addLoader = new AddLoader(getActivity());
-        addLoader.RequestInterstatial();
 
         AntrenmanlarLoad();
 

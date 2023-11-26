@@ -21,7 +21,6 @@ import com.pakachu.apaydinfitness.customdialogs.MyCustomDialog;
 import com.pakachu.apaydinfitness.databinding.FragmentOlculerimBinding;
 import com.pakachu.apaydinfitness.db.DBLocal;
 import com.pakachu.apaydinfitness.db.DBLogin;
-import com.pakachu.apaydinfitness.helpers.AddLoader;
 import com.pakachu.apaydinfitness.helpers.Hashing;
 import com.pakachu.apaydinfitness.helpers.JSONWorkbench;
 import com.journeyapps.barcodescanner.ScanContract;
@@ -277,9 +276,6 @@ public class OlculerimFragment extends Fragment {
         JSONWorkbench jsonWorkbench = new JSONWorkbench(getActivity());
         dbLocal = new DBLocal(getActivity());
         hashing = new Hashing();
-
-        AddLoader addLoader = new AddLoader(getActivity());
-        addLoader.RequestInterstatial();
 
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         String selectedDate = sdf.format(new Date(binding.calendarView.getDate()));

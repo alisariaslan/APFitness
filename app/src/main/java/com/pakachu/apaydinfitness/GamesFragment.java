@@ -10,7 +10,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.pakachu.apaydinfitness.databinding.FragmentGamesBinding;
-import com.pakachu.apaydinfitness.helpers.AddLoader;
 
 
 public class GamesFragment extends Fragment {
@@ -22,9 +21,6 @@ public class GamesFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         binding = FragmentGamesBinding.inflate(inflater, container, false);
-
-        AddLoader addLoader = new AddLoader(getActivity());
-        addLoader.RequestInterstatial();
 
         binding.button23.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -46,7 +46,7 @@ public class QuickRMDialog {
         tv_dialogLink.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                activity.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=com.pakachu.quickrm")));
+                activity.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://en.wikipedia.org/wiki/One-repetition_maximum")));
             }
         });
 

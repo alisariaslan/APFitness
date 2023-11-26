@@ -7,7 +7,6 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.viewbinding.ViewBinding;
 
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -17,13 +16,8 @@ import android.view.ViewGroup;
 
 import com.pakachu.apaydinfitness.adapters.hareketler.OnizleHareketAndDetayAdapter;
 import com.pakachu.apaydinfitness.adapters.hareketler.OnizleHareketAndDetayItem;
-import com.pakachu.apaydinfitness.adapters.idman.ProgramAdapter;
-import com.pakachu.apaydinfitness.adapters.idman_olustur.OnizleHareketAdapter;
-import com.pakachu.apaydinfitness.adapters.idman_olustur.OnizleHareketItem;
-import com.pakachu.apaydinfitness.adapters.idman_olustur.OnizleItem;
 import com.pakachu.apaydinfitness.databinding.FragmentHareketlerBinding;
 import com.pakachu.apaydinfitness.db.DBIdman;
-import com.pakachu.apaydinfitness.helpers.AddLoader;
 import com.pakachu.apaydinfitness.helpers.DefaultHareket;
 
 import java.util.ArrayList;
@@ -43,9 +37,6 @@ public class HareketlerFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
-        AddLoader addLoader = new AddLoader(getActivity());
-        addLoader.RequestInterstatial();
 
         DefaultHareket defaultHareket = new DefaultHareket(getActivity());
         defaultHareket.hareketlerFragment = this;

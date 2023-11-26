@@ -46,10 +46,11 @@ public class LoginFragment extends Fragment {
         dbLogin = new DBLogin(getActivity());
         Cursor cursor = dbLogin.getData();
         if (cursor.getCount() == 0) {
-            dbLogin.addData("apaydin2017", "2017", 0, 0, 100, 0);
-            dbLogin.addData("antrenor2017", "2017", 0, 0, 51, 0);
-            dbLogin.addData("test", "1234", 0, 0, 0, 0);
+            dbLogin.addData("admin", "1234", 0, 0, 100, 0);
+            dbLogin.addData("staff", "1234", 0, 0, 51, 0);
+            dbLogin.addData("user", "1234", 0, 0, 0, 0);
         }
+
 
         binding.button32.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -317,6 +318,9 @@ public class LoginFragment extends Fragment {
                 binding.toggleButton2.toggle();
                 if (!DBLogin.loggedIn)
                     binding.button4.performClick();
+            } else {
+
+                new MyCustomDialog(getActivity()).Toast("Test kullanıcıları: (admin:1234), (staff:1234), (user,1234)");
             }
 
         }

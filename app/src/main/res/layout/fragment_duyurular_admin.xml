@@ -294,7 +294,7 @@
                                     android:layout_marginTop="10dp"
                                     android:layout_marginEnd="20dp"
                                     android:fontFamily="@font/audiowide"
-                                    android:text="Yerel ve Uzak Veritabanlarını temizler"
+                                    android:text="Yerel ve Uzak duyuru Veritabanlarını temizler"
                                     android:textAlignment="center" />
 
                                 <Button

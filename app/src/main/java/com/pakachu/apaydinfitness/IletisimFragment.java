@@ -8,14 +8,12 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import android.os.CountDownTimer;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.AnimationUtils;
 
 import com.pakachu.apaydinfitness.databinding.FragmentIletisimBinding;
-import com.pakachu.apaydinfitness.helpers.AddLoader;
 
 public class IletisimFragment extends Fragment {
 
@@ -65,8 +63,6 @@ public class IletisimFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        AddLoader addLoader = new AddLoader(getActivity());
-        addLoader.RequestInterstatial();
     }
 
     @Override

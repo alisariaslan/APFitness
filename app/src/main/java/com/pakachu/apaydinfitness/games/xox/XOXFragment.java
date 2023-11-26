@@ -15,7 +15,6 @@ import android.widget.Button;
 
 import com.pakachu.apaydinfitness.R;
 import com.pakachu.apaydinfitness.databinding.FragmentXOXBinding;
-import com.pakachu.apaydinfitness.helpers.AddLoader;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -74,9 +73,6 @@ public class XOXFragment extends Fragment {
 
     private void Start() {
         CheckTimers();
-
-        AddLoader addLoader = new AddLoader(getActivity());
-        addLoader.RequestInterstatial();
 
         init();
 

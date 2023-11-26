@@ -2,24 +2,17 @@ package com.pakachu.apaydinfitness;
 
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
-import android.content.pm.ActivityInfo;
-import android.content.res.Configuration;
 import android.os.Build;
 import android.os.Bundle;
 
-import com.google.android.gms.ads.MobileAds;
-import com.google.android.gms.ads.initialization.InitializationStatus;
-import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 import com.google.android.material.snackbar.Snackbar;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.CountDownTimer;
 import android.util.Log;
 import android.view.View;
 
-import androidx.appcompat.app.AppCompatDelegate;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -30,33 +23,13 @@ import com.pakachu.apaydinfitness.helpers.CheckNotif;
 
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.WindowManager;
-import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration appBarConfiguration;
     private ActivityMainBinding binding;
 
-    public static boolean addTimer = false;
-    public static boolean addReadyToLoad = false;
-
     private CheckNotif checkNotif;
-
-    public static CountDownTimer addCountDownTimer = new CountDownTimer(300000, 1000) {
-        @Override
-        public void onTick(long millisUntilFinished) {
-            addTimer = true;
-            Log.e("addtimer", "reklama kalan: " + millisUntilFinished + " " + addReadyToLoad);
-        }
-
-        @Override
-        public void onFinish() {
-            addTimer = false;
-            addReadyToLoad = true;
-            Log.e("addtimer", "reklama hazır: " + addReadyToLoad);
-        }
-    };
 
     private CountDownTimer notifCountDownTimer = new CountDownTimer(300000, 1000) {
         @Override
@@ -85,14 +58,6 @@ public class MainActivity extends AppCompatActivity {
 //        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
         //LANDSCAPE ON START
 //        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
-
-        MobileAds.initialize(MainActivity.this, new OnInitializationCompleteListener() {
-            @Override
-            public void onInitializationComplete(InitializationStatus initializationStatus) {
-                if (!addTimer)
-                    addCountDownTimer.start();
-            }
-        });
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             NotificationChannel notificationChannel = new NotificationChannel("my_notif", "my_notif", NotificationManager.IMPORTANCE_DEFAULT);

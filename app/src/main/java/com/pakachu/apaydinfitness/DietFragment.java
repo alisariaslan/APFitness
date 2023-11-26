@@ -23,7 +23,6 @@ import com.pakachu.apaydinfitness.customdialogs.MyCustomDialog;
 import com.pakachu.apaydinfitness.databinding.FragmentDietBinding;
 import com.pakachu.apaydinfitness.db.DBDiet;
 import com.pakachu.apaydinfitness.db.DBLocal;
-import com.pakachu.apaydinfitness.helpers.AddLoader;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -42,9 +41,6 @@ public class DietFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         binding = FragmentDietBinding.inflate(inflater, container, false);
-
-        AddLoader addLoader = new AddLoader(getActivity());
-        addLoader.RequestInterstatial();
 
         CalculateReqDailyMacros();
         ListDailyFoods();
