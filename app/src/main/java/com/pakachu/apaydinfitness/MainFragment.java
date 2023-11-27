@@ -343,7 +343,6 @@ public class MainFragment extends Fragment {
         int orientation = getResources().getConfiguration().orientation;
         if (orientation == Configuration.ORIENTATION_PORTRAIT) {
             binding.textView.startAnimation(AnimationUtils.loadAnimation(getContext(), R.anim.comefromup));
-            binding.imageView2.startAnimation(AnimationUtils.loadAnimation(getContext(), R.anim.comefromdown));
         }
     }
 

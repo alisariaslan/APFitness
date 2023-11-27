@@ -42,7 +42,7 @@
                     android:shadowDx="10"
                     android:shadowDy="10"
                     android:shadowRadius="10"
-                    android:text="APAYDIN\nFITNESS"
+                    android:text="AP FITNESS"
                     android:textColor="#FFEB3B"
                     android:textSize="48sp" />
 
@@ -57,7 +57,7 @@
                     android:shadowDx="10"
                     android:shadowDy="10"
                     android:shadowRadius="10"
-                    android:text="0532 576 82 39"
+                    android:text="+90 537 463 94 93"
                     android:textColor="#FFEB3B"
                     android:textIsSelectable="true"
                     android:textSize="24sp"
@@ -115,7 +115,7 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="300dp"
                                     android:scaleType="centerCrop"
-                                    android:src="@drawable/sube_yenikent"
+                                    android:src="@drawable/background_main"
                                     tools:visibility="visible" />
 
                                 <androidx.constraintlayout.widget.ConstraintLayout
@@ -137,7 +137,7 @@
                                             android:layout_height="match_parent"
                                             android:fontFamily="@font/audiowide"
                                             android:gravity="center"
-                                            android:text="Yenikent Şube"
+                                            android:text="Şube 1"
                                             android:textColor="#D1D1D1"
                                             android:textSize="20sp"
                                             tools:visibility="visible" />
@@ -170,7 +170,7 @@
                                     android:drawableStart="@drawable/google_map_icon"
                                     android:fontFamily="@font/allerta"
                                     android:gravity="center"
-                                    android:text="Yenikent, Şht. Öğretmen Erkan Aydın Cd. No:34, 41900 Derince/Kocaeli"
+                                    android:text="Marmara Denizi, 10000 Marmara/Balıkesir"
                                     android:textColor="#D1D1D1"
                                     android:textIsSelectable="true"
                                     android:textSize="16sp" />
@@ -229,7 +229,7 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="300dp"
                                     android:scaleType="centerCrop"
-                                    android:src="@drawable/sube_korfezkent"
+                                    android:src="@drawable/background_main"
                                     tools:visibility="visible" />
 
                                 <androidx.constraintlayout.widget.ConstraintLayout
@@ -251,7 +251,7 @@
                                             android:layout_height="match_parent"
                                             android:fontFamily="@font/audiowide"
                                             android:gravity="center"
-                                            android:text="Körfezkent Şube"
+                                            android:text="Şube 2"
                                             android:textColor="#D1D1D1"
                                             android:textSize="20sp"
                                             tools:visibility="visible" />
@@ -284,7 +284,7 @@
                                     android:drawableStart="@drawable/google_map_icon"
                                     android:fontFamily="@font/allerta"
                                     android:gravity="center"
-                                    android:text="Yavuz Sultan Selim, Nergiz Cd. No:7, 41780 Körfez/Kocaeli"
+                                    android:text="Marmara Denizi, 10000 Marmara/Balıkesir"
                                     android:textColor="#D1D1D1"
                                     android:textIsSelectable="true"
                                     android:textSize="16sp" />

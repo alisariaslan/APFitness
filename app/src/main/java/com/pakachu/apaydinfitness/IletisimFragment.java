@@ -29,7 +29,7 @@ public class IletisimFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 v.startAnimation(AnimationUtils.loadAnimation(getContext(), R.anim.rotate));
-                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.instagram.com/apaydin_fitness/?hl=tr")));
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.instagram.com/alisariasln")));
             }
         });
 
@@ -37,21 +37,21 @@ public class IletisimFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 v.startAnimation(AnimationUtils.loadAnimation(getContext(), R.anim.rotate));
-                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("tel:05325768239")));
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("tel:905374639493")));
             }
         });
 
         binding.button17.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("geo:40.775523901392845, 29.811244481385344")));
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("geo:40.76172310870116, 29.515405065199424")));
             }
         });
 
         binding.button18.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("geo:40.776094545386485, 29.799866196726022")));
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("geo:40.76172310870116, 29.515405065199424")));
 
             }
         });
