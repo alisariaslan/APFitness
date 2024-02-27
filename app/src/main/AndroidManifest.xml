@@ -13,11 +13,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ApaydinFitness"
         android:usesCleartextTraffic="true"
-        tools:targetApi="31">
+        tools:targetApi="34">
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:label="Apaydın Fitness"
+            android:label="APFitness"
             android:theme="@style/Theme.ApaydinFitness.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -25,10 +25,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <meta-data
-            android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-8946455145480386~7405905971" />
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
