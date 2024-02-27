@@ -1,2 +1,3 @@
 # APFitness
-Outdated app for local business.
+
+Old ApaydinFitness mobile app project.
