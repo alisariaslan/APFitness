@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.database.Cursor;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.os.Debug;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
@@ -50,7 +51,6 @@ public class LoginFragment extends Fragment {
             dbLogin.addData("staff", "1234", 0, 0, 51, 0);
             dbLogin.addData("user", "1234", 0, 0, 0, 0);
         }
-
 
         binding.button32.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -193,7 +193,7 @@ public class LoginFragment extends Fragment {
                                     MyCustomDialog myCustomDialog =new MyCustomDialog(getActivity());
                                     myCustomDialog.setButtons("Kabul Ediyorum","İptal");
                                     myCustomDialog.setCaption("Gizlilik Politikası");
-                                    myCustomDialog.setContent("Apaydın Fitness gizlilik politikası, verilerinizin nasıl kullanıldığını ve\n" +
+                                    myCustomDialog.setContent("AP Fitness gizlilik politikası, verilerinizin nasıl kullanıldığını ve\n" +
                                             "uygulamamızı kullandığınızda bize sağladığınız verileri korur.\n" +
                                             "Bu politikayı herhangi bir zamanda değiştirme hakkımız saklıdır.\n" +
                                             "Hangi Kullanıcı Verilerini Topluyoruz:\n" +
@@ -203,9 +203,9 @@ public class LoginFragment extends Fragment {
                                             "• İhtiyaçlarınızı daha iyi anlamak için.\n" +
                                             "• Hizmetlerimizi ve ürünlerimizi geliştirmek.\n" +
                                             "Verilerin Korunması ve Güvenliğinin Sağlanması\n" +
-                                            "Apaydın Fitness, verilerinizi güvence altına almayı ve gizli tutmayı taahhüt eder.\n" +
-                                            "Apaydın Fitness, veri hırsızlığını, yetkisiz erişimi engellemek için elinden geleni yapıyor.\n" +
-                                            "Apaydın Fitness en son teknolojileri kullanır.\n" + "\n" +
+                                            "AP Fitness, verilerinizi güvence altına almayı ve gizli tutmayı taahhüt eder.\n" +
+                                            "AP Fitness, veri hırsızlığını, yetkisiz erişimi engellemek için elinden geleni yapıyor.\n" +
+                                            "AP Fitness veri güvenliğiniz için en son teknolojileri kullanır.\n" + "\n" +
                                             "Bu gizlilik politikasını okudum ve kabul ediyorum.");
                                     myCustomDialog.positive.setOnClickListener(new View.OnClickListener() {
                                         @Override
@@ -318,11 +318,7 @@ public class LoginFragment extends Fragment {
                 binding.toggleButton2.toggle();
                 if (!DBLogin.loggedIn)
                     binding.button4.performClick();
-            } else {
-
-                new MyCustomDialog(getActivity()).Toast("Test kullanıcıları: (admin:1234), (staff:1234), (user,1234)");
             }
-
         }
 
         binding.checkBox2.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {

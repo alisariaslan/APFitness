@@ -3,6 +3,13 @@ plugins {
 }
 
 android {
+    signingConfigs {
+        alisariaslan {
+            storePassword 'a5134ba8'
+            keyAlias 'ali'
+            keyPassword 'a5134ba8'
+        }
+    }
     compileSdk 34
 
     defaultConfig {
